@@ -1,7 +1,7 @@
 {
   "name": "angular-routing",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fork, clone, and run `npm install` to get started.",
   "main": "index.js",
   "scripts": {
     "test": "nodemon server/app.js",
@@ -16,5 +16,14 @@
     "bootstrap": "^3.3.7",
     "express": "^4.15.2",
     "pg": "^6.1.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celina/prime-angular-code-challenge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/celina/prime-angular-code-challenge/issues"
+  },
+  "homepage": "https://github.com/celina/prime-angular-code-challenge#readme"
 }
