@@ -1,5 +1,19 @@
 <!-- // add-hero.html -->
 
-<p>
-  Build a form to enter new heroes into the system.
-</p>
+<section>
+  <h1>Enter Hero</h1>
+   <form ng-submit="ahc.addHero()">
+    <label for="heroPersona">Persona:
+      <input type="text" id="heroPersona" name="heroPersona" ng-model="ahc.newHero.persona" />
+    </label>
+
+    <label for="heroAlias">Alias:
+      <input type="text" id="heroAlias" name="heroAlias" ng-model="ahc.newHero.alias" />
+    </label>
+
+    <label for="heroPowerId">Power ID:
+      <input type="number" id="heroPowerId" name="heroPowerId" ng-model="ahc.newHero.power_id"/>
+    </label>
+
+    <input type="submit" value="Add Hero" />
+  </form>
