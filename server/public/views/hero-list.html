@@ -16,10 +16,15 @@ Test Message: {{hlc.testMessage}} -->
     <th>Power ID</th>
     <th>Button</th>
   </thead>
-  <tr ng-repeat="hero in hlc.heroes"  ng-class="{true: !hero.status}">
-    <td>{{hero.persona}}</td>
+  <tr ng-repeat="hero in hlc.heroes">
+    <!-- <td>{{hero.persona}}</td>
     <td>{{hero.alias}}</td>
     <td>{{hero.power_id}}</td>
-    <td><button ng-click="hlc.deleteHero(hero.id)">Delete</button></td>
+    <td><button ng-click="hlc.deleteHero(hero.id)">Delete</button></td> -->
+
+    <td><span editable-text="hero.persona" onaftersave="hlc.newHero(hero)" >{{hero.persona || "Empty"}}</span></td>
+    <td><span editable-text="hero.alias" onaftersave="hlc.newHero(hero)">{{hero.alias || "Empty"}}</span></td>
+    <td><span editable-text="hero.power_id" onaftersave="hlc.newHero(hero)">{{hero.power_id || "Empty"}}</span></td>
+    <td><button ng-click="hlc.deleteHero(hero.id)" class="btn btn-danger btn-xs">&times;</button></td>
   </tr>
 </table>

@@ -1,5 +1,11 @@
 var app = angular.module('HeroApp', ['ngRoute']);
 
+// var app = angular.module('HeroApp', ['ngRoute', 'xeditable']);
+
+// app.run(function(editableOptions) {
+//   editableOptions.theme = 'bs3';
+// });
+
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
   .when('/heroList', {

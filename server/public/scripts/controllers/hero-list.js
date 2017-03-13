@@ -1,9 +1,14 @@
 app.controller('HeroListController', ['$http', function($http) {
   console.log('Hero List Controller loaded');
 
+  app.run(function(editableOptions) {
+    editableOptions.theme = 'bs3';
+  });
+
   var self = this;
   self.testMessage = "This is my test message";
   self.heroes = [];
+  self.updateHero = {};
 
   getHeroes();
 
@@ -22,5 +27,12 @@ app.controller('HeroListController', ['$http', function($http) {
       }); // end $http.get
     } // end if confirm
   } // end deleteHero() function
+
+  self.saveHero = function(heroObject) {
+    console.log(heroObject);
+    $http.put('/heroes/save/' + heroObject.id).then(function(response) {
+      getHeroes();
+    }); // end $http.put
+  } // end saveHero() function
 
 }]);
